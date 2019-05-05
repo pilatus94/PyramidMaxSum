@@ -1,2 +1,3 @@
 # PyramidMaxSum
-Task submission for MaxSum problem.
+
+Answer: 8186
