@@ -45,32 +45,7 @@ namespace PyramidMaxSum
                 largestValues[i] = numPyr[numPyr.GetLength(0) - 1, i];
             }
 
-            #region Explanation
-            //Algorithm explanation:
-            //Starting array looks like this:
-            // 1 0 0 0 
-            // 8 9 0 0 
-            // 1 5 9 0 
-            // 4 5 2 3
-
-            //Make numbers that do not belong on a row due to being even or odd or zero to int.MinValue
-            // 1 -2147483648 -2147483648 -2147483648
-            // 8 -2147483648 -2147483648 -2147483648
-            // 1  5           9          -2147483648  
-            // 4 -2147483648  2          -2147483648
-
-            //Preload largestValue array with bottom row 
-            // [4 -2147483648  2          -2147483648]
-
-            //Starting with penultimate row from starting array reassign largestValues array values by the following rule:
-            //Take a j-th value from i-th row of starting array and add it to a j-th or j-th+1 value (whichever is larger) from largestValues array and assign it to j-th value of largestValues array
-            //1st step largestValues array: [5 7 11 -2147483648*2]
-            //2nd step largestValues array: [15 -2147483637 -2147483637 -2147483648*3]
-            //3rd step largestValues array: [16 ... ... ...]
-            //Answer: maxSum is 16
-
-
-            #endregion
+           
 
             //Traverse the numPyr array
             //Begin at the bottom
